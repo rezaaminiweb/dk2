@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation'
 import './pagination.css'
-// import 'swiper/css/pagination';
+import 'swiper/css/pagination';
 
 import './styles.css';
 import { product, profile } from '../component/Details/Details';
@@ -21,7 +21,7 @@ const Layout = () => {
                     <Swiper
                         Pagination={true}
                         navigation={true}
-                        slidesPerView={12}
+                        slidesPerView={8}
                         modules={[Navigation, Pagination]}
                         className="mySwiper p-4"
 
@@ -34,8 +34,8 @@ const Layout = () => {
 
                                         <div className='flex '>
                                             <div className='' >
-                                                <figure className='  '>
-                                                    <Link to={`/login`} href="/login">
+                                                <figure className=' mx-3  flex justify-center'>
+                                                    <Link to={`/login`} href="/login" className=' flex flex-col items-center'>
                                                     <img src={item.image} className='w-[50px] h-[50px] outline outline-[#CA6E95] p-[2px]  rounded-full overflow-hidden object-cover ' alt="" />
                                                     <figcaption className='text-sl py-2 text-center'>
                                                         <p>{item.name}</p>

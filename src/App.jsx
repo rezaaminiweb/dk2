@@ -6,29 +6,63 @@ import Cart from "./pages/Cart"
 import Product from "./pages/Product"
 import Header from "./component/Header"
 import Footer from "./component/Footer"
+import Login from "./pages/Login"
 
 
 function App() {
 
 
   return (
-    <>
-    <Header/>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Layout />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/product/*" element={<Product />} />
-        </Routes>
-        
-      </Router>
-        <Footer/>
-       
-      
 
-    </>
+    <Router>
+     
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Header />
+            <Layout />
+            <Footer />
+          </>} />
+
+        <Route path="/blog" element={
+          <>
+        <Header/>
+        <Blog />
+        <Footer/>
+        </>} />
+        <Route path="/shop" element={
+        <>
+        <Header/>
+        <Shop />
+        <Footer/>
+        </>} />
+        <Route path="/cart" element={
+        <>
+        <Header/>
+        <Cart />
+        <Footer/>
+        </>} />
+        <Route path="/product/*" element={
+        <>
+        <Header/>
+        <Product />
+        <Footer/>
+        </>} />
+        <Route path="/login" element={
+          <>
+         
+          <Login/>
+        
+          </>
+        } />
+      </Routes>
+
+    
+    </Router>
+
+
+
+
   )
 }
 
