@@ -5,14 +5,16 @@ import Shop from "./pages/Shop"
 import Cart from "./pages/Cart"
 import Product from "./pages/Product"
 import Header from "./component/Header"
+import Footer from "./component/Footer"
+
 
 function App() {
 
 
   return (
     <>
+    <Header/>
       <Router>
-        <Header/>
         <Routes>
           <Route path="/" element={<Layout />} />
           <Route path="/blog" element={<Blog />} />
@@ -20,7 +22,11 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/*" element={<Product />} />
         </Routes>
+        
       </Router>
+        <Footer/>
+       
+      
 
     </>
   )
