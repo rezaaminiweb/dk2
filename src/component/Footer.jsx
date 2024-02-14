@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { menuFooter, menuFooter3, menuFooter4, menuFoter1, menuFoter2 } from './Details/Details'
 import digi from "./../assets/img/digi.svg"

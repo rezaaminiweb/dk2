@@ -7,6 +7,7 @@ import Product from "./pages/Product"
 import Header from "./component/Header"
 import Footer from "./component/Footer"
 import Login from "./pages/Login"
+import SignUp from "./pages/signup"
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
         
           </>
         } />
+        <Route path="/signup" element={<SignUp/>}/>
       </Routes>
 
     

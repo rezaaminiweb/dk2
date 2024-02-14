@@ -9,7 +9,6 @@ export default {
       fontSize:{
         xs : '8px',
         s : '10px',
-        sw : '11px',
         sl : '12px',
         sx : '14px'
       }
