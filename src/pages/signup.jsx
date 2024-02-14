@@ -38,12 +38,30 @@ const SignUp = () => {
             <div className="w-full">
                 <div className="container mx-auto">
                     <div className="w-full h-screen flex justify-center items-center">
-                        <div className="p-5 border border-black">
+                        <div className="p-5 border rounded-md border-[#00000056]">
                             <div className="">
-                                <figure>
+                                <figure className="items-center flex flex-col">
                                     <img src={digiicon} alt="" />
+                                    <figcaption className=" py-3 ">
+                                        <div className="flex items-center text-[#000]">
+                                            <p className="text-2xl font-bold">
+                                                صفحه
+                                            </p>
+                                            <span className="mx-2">|</span>
+                                            <p className="text-2xl font-bold">
+                                                ورود
+                                            </p>
+                                        </div>
+                                        <p className="text-sl font-bold text-[#000000c1]">
+                                            سلام!
+                                        </p>
+                                        <p className="text-sl font-bold text-[#000000c1]">
+                                            لطفا نام کاربری و رمز عبور خود را وارد کنید.
+                                        </p>
+                                    </figcaption>
                                 </figure>
-                                
+
+
                             </div>
                             <form onSubmit={e => handleSubmit(e)}>
                                 <div>
@@ -61,7 +79,7 @@ const SignUp = () => {
                                 </div>
                                 <div>
                                     <label htmlFor="password">رمز عبور</label>
-                                    <input type="text" id="passwrod" value={state.password} onChange={(e) => {
+                                    <input type="text" id="password" value={state.password} onChange={(e) => {
                                         dispatch({
                                             type: 'field',
                                             fieldName: 'password',
@@ -69,9 +87,11 @@ const SignUp = () => {
                                         })
                                     }} />
                                 </div>
-                                <button >
-                                    ورود
-                                </button>
+                                <div>
+                                    <button >
+                                        ورود
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </div>
